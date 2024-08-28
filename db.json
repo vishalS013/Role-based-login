@@ -1,0 +1,9 @@
+{
+    "posts": [
+      { "user": 1, "pwd": "Hello World" }
+    ],
+    "comments": [
+      { "user": 1, "pwd": "This is a comment" }
+    ]
+  }
+  

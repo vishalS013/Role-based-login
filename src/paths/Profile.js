@@ -2,7 +2,7 @@ import React from 'react'
 
 const Profile = () => {
   return (
-    <div>
+    <div className='text-center'>
       <p>Profile</p>
       <h1>It can view all the users</h1>
     </div>

@@ -1,8 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
 * {
     margin: 0;
@@ -13,12 +9,12 @@
 html {
     font-family: 'Nunito', sans-serif;
     font-size: 22px;
-    color: #161212;
+    color: #1a1515;
 }
 
 body {
     min-height: 100vh;
-    /* background-color: rgb(76, 83, 90); */
+    background-color: rgb(101, 31, 104);
 }
 
 .App {
@@ -50,7 +46,7 @@ form {
 }
 
 a, a:visited {
-    color: #fff;
+    color: #080606;
 }
 
 input[type="text"],
@@ -75,8 +71,8 @@ button {
 .instructions {
     font-size: 0.75rem;
     border-radius: 0.5rem;
-    background: #000;
-    color: #fff;
+    background: #f3f2f2;
+    color: #141313;
     padding: 0.25rem;
     position: relative;
     bottom: -10px;
@@ -115,4 +111,4 @@ button {
 
 .line {
     display: inline-block;
-}
+} */

@@ -7,6 +7,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useAuth } from "./role/authContext";
 import { useNavigate } from "react-router-dom";
+import './index.css'
 
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
@@ -79,7 +80,7 @@ const Register = () => {
           </p>
         </section>
       ) : (
-        <section>
+        <section className="flex mx-auto mt-[10%]">
           <p
             ref={errRef}
             className={errMsg ? "errmsg" : "offscreen"}
@@ -112,6 +113,7 @@ const Register = () => {
               aria-describedby="uidnote"
               onFocus={() => setUserFocus(true)}
               onBlur={() => setUserFocus(false)}
+               placeholder="Enter username"
             />
             <p
               id="uidnote"
@@ -148,6 +150,7 @@ const Register = () => {
               aria-describedby="pwdnote"
               onFocus={() => setPwdFocus(true)}
               onBlur={() => setPwdFocus(false)}
+              placeholder="Enter password"
             />
             <p
               id="pwdnote"

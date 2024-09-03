@@ -13,11 +13,16 @@ import Admin from "./Admin";
 import Settings from "./paths/Settings";
 import Profile from "./paths/Profile";
 import Navigation from "./navigation";
+import Data from "./paths/Data";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import Feed from "./paths/Feed";
+const queryClient = new QueryClient();
 
 function App() {
   return (
-    <main className="App">
+    <main >
       <AuthProvider>
+        <QueryClientProvider client={queryClient}>
         <Router>
           <Navigation />
           <Routes>
@@ -27,17 +32,23 @@ function App() {
             <Route element={<PrivateRoute requiredRole="admin" />}>
               <Route path="/admin" element={<Admin />} />
               <Route path="/settings" element={<Settings />} />
+              <Route path="/data" element={<Data />} />
+
              
             </Route>
 
             <Route element={<PrivateRoute requiredRole="user" />}>
               <Route path="/user" element={<User />} />
+              <Route path="/feed" element={<Feed />} />
+
             </Route>
 
             <Route path="/" element={<Navigate to="/register" />} />
           </Routes>
         </Router>
+      </QueryClientProvider>
       </AuthProvider>
+  
     </main>
   );
 }
